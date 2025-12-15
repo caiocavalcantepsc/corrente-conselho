@@ -761,6 +761,7 @@ section {
 
     .section {
         padding: 60px 0;
+        
     }
 
     .hide-mobile {
@@ -789,7 +790,7 @@ section {
 
     .container-vb h1,
     .container-vb p {
-        width: 670px;
+        width: 140%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -877,7 +878,7 @@ section {
     }
 
     .unidades{
-      width: 600px;
+      width: 160%;
       align-items: center;
     }
 
@@ -915,7 +916,8 @@ section {
     .women-section {
         padding: 50px 20px;
         gap: 25px;
-        width: 250%;
+        width: 160%;
+        align-items: center;
     }
 
     .women-text h2 {
@@ -929,7 +931,7 @@ section {
     }
 
     .women-carousel {
-        width: 100%;
+        width: 120%;
         overflow: hidden;
     }
 
@@ -942,4 +944,66 @@ section {
         width: auto;
         border-radius: 6px;
     }
+
+
+
+
+
+
+
+
+
+
+
+    .section-img{
+      width: 160%;
+    }
+  
+  .container-imp {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+    width: 160%;
+  }
+
+  .image-imp {
+    width: 100%;
+    height: 260px; /* banner */
+    border-radius: 16px;
+  }
+
+  .image-imp img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-imp {
+    padding: 24px;
+  }
+
+  .card-imp h1 {
+    font-size: 1.6rem;
+  }
+
+
+
+
+  .contato-overlay{
+    width: 100%;
+  }
+
+  .contato{
+    width: 170%;
+  }
+
+
+
+
+  .footer{
+    width: 160%;
+  
+  }
 }
+
+
+
