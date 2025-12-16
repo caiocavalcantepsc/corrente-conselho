@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
+  font-family: Trebuchet MS, sans-serif;
+  letter-spacing: 2px;
 }
 
 body {
-  background: #0e0e0e;
+  background: #000000;
   color: #fff;
 }
 
@@ -96,7 +98,7 @@ section {
 }
 
 .section.dark {
-  background: #111;
+  background: #000000;
   text-align: center;
 }
 
@@ -106,20 +108,71 @@ section {
   gap: 100px;
 }
 
-.card {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 5px;
-  margin-right: 50px;
-  height: 73%;
-  margin-top: 75px;
-  margin-left: -60px;
+
+
+
+
+
+
+
+
+.manifesto-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("maosdadas.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  color: #fff;
 }
 
-.maos {
-  margin-left: 40px;
-  border-radius: 5px
+.manifesto-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
 }
+
+.manifesto-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.manifesto-content h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.manifesto-lead {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.manifesto-content p {
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.manifesto-sign {
+  display: block;
+  margin-top: 30px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
 
 .center {
   text-align: center;
@@ -143,15 +196,7 @@ section {
   align-content: baseline;
 }
 
-.container-bv {
-  display: grid;
-  margin-bottom: 40px;
-  margin-bottom: 100px;
-  /* background-color: red; */
-  background-image: url('https://media.istockphoto.com/id/1089282134/pt/foto/abstract-3d-black-cubes-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=xXeUPUHHh50dVsC3ARr3yo4URf7r6zt8Qz5MGWeL4ds=');
-  background-size: cover;
-  padding: 20px;
-}
+
 
 
 
@@ -165,6 +210,7 @@ section {
   background-image: url('doubleleg.png');
   background-size: cover;
   background-position: center;
+  
 
 }
 
@@ -245,11 +291,13 @@ section {
 .servico.left {
   align-self: flex-start;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .servico.right {
   align-self: flex-end;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 /* Texto sempre nítido */
@@ -280,76 +328,45 @@ section {
 
 
 /* O CAOUSEL DAS CRIANÇAS COMEÇA AQUI */
-.carousel-section {
-  /* padding: 80px 40px; */
-  text-align: center;
+.kids-section {
+  background: #0b0b0b;
+  padding: 80px 40px;
 }
 
-.carousel-section h2 {
-  font-size: 2.5rem;
+.kids-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.kids-header h2 {
+  font-size: 42px;
   margin-bottom: 10px;
 }
 
-.carousel-text {
-  max-width: 600px;
-  margin: 0 auto 40px;
-  opacity: 0.85;
+.kids-header p {
+  opacity: 0.8;
+  line-height: 1.5;
 }
 
-.carousel {
-  position: relative;
-  max-width: 700px;
+/* grid de fotos */
+.kids-grid {
+  max-width: 1200px;
   margin: auto;
-  overflow: hidden;
-  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.carousel-track {
-  position: relative;
+.kids-grid img {
   width: 100%;
-  height: 320px;
-}
-
-.carousel-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  height: 240px;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  border-radius: 10px;
+  filter: grayscale(30%);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.carousel-img.active {
-  opacity: 1;
-}
-
-/* Setas */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  border: none;
-  font-size: 30px;
-  padding: 10px 16px;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.3s;
-}
-
-.arrow:hover {
-  background: rgba(0, 0, 0, 0.85);
-}
-
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
-}
 
 /* E TERMINA AQUI */
 
@@ -463,53 +480,134 @@ section {
 
 
 
+
+.sensei-section {
+  background: #000;
+  padding: 100px 40px;
+  color: #fff;
+}
+
+.sensei-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.sensei-image img {
+  width: 100%;
+  border-radius: 6px;
+  filter: grayscale(100%);
+}
+
+.sensei-content {
+  text-align: left;
+}
+
+.sensei-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.sensei-content h1 {
+  font-size: 48px;
+  margin: 10px 0 20px;
+}
+
+.sensei-highlight {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.sensei-content p {
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.sensei-signature {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
 /* MULHERES AQUI */
 .women-section {
   position: relative;
-  padding: 100px 40px;
-  min-height: 160vh;
+  padding: 120px 40px;
   background: url("w3.jpg") center / cover no-repeat;
-  overflow: hidden;
-  text-align: center;
-
+  color: #fff;
 }
 
-/* overlay escuro */
 .women-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.95); /* controla o escurecimento */
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.women-section > * {
+  position: relative;
   z-index: 1;
 }
 
-/* conteúdo acima da imagem */
-.women-section > * {
-  position: relative;
-  z-index: 2;
+/* INTRO */
+.women-intro {
+  max-width: 520px;
+  margin: 0 auto 80px;
+  text-align: center;
 }
 
-/* TEXTO */
-.women-text {
-  max-width: 500px;
-  margin: 0 auto;
-  margin-bottom: 70px;
-}
-
-.women-text h2 {
-  font-size: 2.5rem;
+.women-intro h2 {
+  font-size: 44px;
   margin-bottom: 15px;
-  font-size:45px;
-
 }
 
-.women-text p {
-  font-size: 1rem;
-  opacity: 0.85;
-  line-height: 1.3;
+.women-lead {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
+/* CARD */
+.women-card {
+  max-width: 620px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-left: 3px solid #fff;
+}
 
+.women-card h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.women-card p {
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.women-strong {
+  font-weight: 600;
+  font-size: 17px;
+}
 /* TERMINA AQUI */
 
 
@@ -741,373 +839,371 @@ section {
 
 
 
+/* Dispositivos móveis (até 768px) */
 @media (max-width: 768px) {
+  /* Ajustes gerais */
+  * {
+    letter-spacing: 1px;
+  }
 
-  /* GERAL */
   section {
     min-height: auto;
     padding: 60px 20px;
   }
 
-  body {
-    font-size: 16px;
+  .header {
+    padding: 15px 20px;
   }
 
-  /* HERO */
+  .nav {
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .fotologo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  /* Hero Section */
   .hero {
-    background-image: url('bg16.jpg');
-    background-size: cover;
-    min-height: 1500px;
-    font-size: 20px;
-    width:800px;
+    min-height: 100vh;
+    font-size: 18px;
+    background-attachment: scroll;
+    padding: 40px 20px;
   }
 
-  .hero p {
-    font-size: 10px;
-    align-items: center;
-    margin-bottom: 30px;
+  .hero .container-o {
+    margin: 0;
+    margin-top: 50%;
+    margin-left: 20px;
   }
 
   .hero h1 {
-    font-size: 30px;
-    width: 500px;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-
-
-
-
-  .container-o {
-    margin-left: 0;
-    margin-bottom: 550px;
-    padding: 0 20px;
+    font-size: 10px;
+    line-height: 1.3;
+    margin-top: 150px;
   }
 
   .hero p {
-    text-align: left;
     font-size: 18px;
+    text-align: right;
+    margin-right: 20px;
+    /* margin-top: 100px; */
   }
 
-
-
-
-
-  .container-bv {
-    padding: 20px 10px;
-    margin-bottom: 40px;
-    margin-left: 0px;
-    width: 800px;
-    background-image: url('bg.png');
+  /* Manifesto */
+  .manifesto-section {
+    padding: 40px 20px;
   }
 
-  .container-bv h1{
-    text-align: center;
+  .manifesto-content h1 {
+    font-size: 36px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .maos {
-    margin: 0 auto;
-    width: 500px;
-    width: 500px;
-    /* max-width: 300px; */
-    display: block;
-  }
-
-  .card {
-    margin: 0;
-    height: auto;
-    padding: 0 30px;
-  }
-
-  .section {
-    padding: 60px 0;
-
+  .manifesto-lead {
+    font-size: 18px;
   }
 
   .hide-mobile {
     display: none;
   }
 
+  /* Sensei Section */
+  .sensei-section {
+    padding: 60px 20px;
+  }
 
+  .sensei-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
+  .sensei-content h1 {
+    font-size: 36px;
+  }
 
+  .sensei-highlight {
+    font-size: 16px;
+  }
 
+  /* Serviços */
+  .servicos {
+    min-height: auto;
+    padding: 60px 20px;
+  }
 
   .servicos-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 0 15px;
-    width: 500px;
-  }
-
-  .container-vb {
-    /* padding: 0 15px; */
-    text-align: center;
-    width: 600px;
-    margin-left: -65px;
-    
-  }
-
-  .container-vb h1,
-  .container-vb p {
-    width: 600px;
-  }
-
-  .servico.left,
-  .servico.right {
-    margin-top: 80px;
-    box-shadow: 0 0 60px rgba(83, 83, 83, 0.288);
-  }
-
-
-  .carouse-section {
-    width: 1400px;
+    gap: 30px;
   }
 
   .servico {
     width: 100%;
-    margin-top: 0;
-    padding: 20px;
+    margin: 0 0 30px 0 !important;
+    align-self: center !important;
   }
 
-  .servicos {
-    width: 800px;
-    background-image: url('bgvertser.jpg');
-    align-items: center;
-
+  .container-vb {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    text-align: center;
   }
 
-
-
-
-
-
-.crianca-section  {
-width: 800px;
-}
-
-/* TEXTO */
-.crianca-text {
-  max-width: 500px;
-  margin: 0 auto 70px;
-}
-
-
-
-
-
-
-/* container visível */
-.carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-}
-
-/* trilha animada */
-.carousel-track {
-  display: flex;
-  gap: 30px;
-  animation: scroll 25s linear infinite;
-}
-
-/* imagens */
-.carousel-track img {
-  height: 320px;
-  width: auto;
-  flex-shrink: 0;
-  object-fit: cover;
-  border-radius: 15px;
-  padding: 10px;
-}
-
-
-
-
-
-
-
-
-  .carousel-section {
-    padding: 50px 15px;
-    width: 700px;
+  .container-vb h1 {
+    font-size: 28px;
   }
 
-  .carousel-section h2 {
-    font-size: 1.8rem;
+  /* Kids Section */
+  .kids-section {
+    padding: 60px 20px;
   }
 
-  .carousel-text {
-    font-size: 14px;
-    margin-bottom: 25px;
+  .kids-header h2 {
+    font-size: 32px;
   }
 
-  .carousel {
-    max-width: 100%;
-    border-radius: 8px;
+  .kids-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
-  .carousel-track {
-    height: 280px;
+  .kids-grid img {
+    height: 180px;
   }
 
-  .carousel-img {
-    /* object-fit: cover; */
-    margin-left: 100px;
+  /* Unidades */
+  .unidades {
+    padding: 60px 20px;
   }
 
-  .arrow {
-    font-size: 22px;
-    padding: 6px 10px;
+  .unidades h2 {
+    font-size: 2rem;
   }
-
-  .arrow.left {
-    left: 5px;
-  }
-
-  .arrow.right {
-    right: 5px;
-  }
-
-
-
-
-
-
 
   .unidade {
-    width: 600px;
-    height: 300px;
-  }
-
-  .unidades {
-    width: 800px;
-    padding: none;
-  }
-
-
-  .unidade-info {
-    font-size: 5px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
   }
 
   .unidade img {
-    height: 200px;
-    width: 300px;
+    height: 250px;
   }
 
-  .unidade-info h3 {
+  .unidade-info {
+    text-align: center;
+  }
+
+  /* Women Section */
+  .women-section {
+    padding: 60px 20px;
+  }
+
+  .women-intro h2 {
+    font-size: 32px;
+  }
+
+  .women-card {
+    padding: 25px;
+  }
+
+  .women-card h3 {
     font-size: 20px;
   }
 
+  /* Contato */
+  .contato {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .contato-container h2 {
+    font-size: 2rem;
+  }
+
+  .btn-whatsapp {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+
+  /* Mapas */
   .mapa iframe {
     height: 200px;
   }
 
-
-
-
-
-
-
-
-
-
-  .women-section {
-    padding: 50px 20px;
-    gap: 25px;
-    width: 800px;
-    align-items: center;
-  }
-
-  .women-text h2 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-  }
-
-  .women-text p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .women-carousel {
-    width: 120%;
-    overflow: hidden;
-  }
-
-  .women-carousel .carousel-track {
-    gap: 15px;
-  }
-
-  .women-carousel img {
-    height: 160px;
-    width: auto;
-    border-radius: 6px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-  .section-img {
-    width: 160%;
-  }
-
+  /* Seção Importância (comentada) - manter responsiva caso ative */
   .container-imp {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 20px;
-    width: 160%;
-  }
-
-  .image-imp {
-    width: 100%;
-    height: 260px;
-    /* banner */
-    border-radius: 16px;
-  }
-
-  .image-imp img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .card-imp {
-    width: 90%;
-    /* border: none; */
-    margin-left:-30px;
   }
 
   .card-imp h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero .container-o {
+    margin-left: 50px;
+    margin-bottom: 30%;
   }
 
+  .hero h1 {
+    font-size: 32px;
+  }
 
+  .sensei-wrapper {
+    gap: 40px;
+  }
 
+  .servico {
+    width: 85%;
+  }
 
-  .contato-overlay {
+  .unidade {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+  }
+
+  .kids-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .women-intro {
+    max-width: 80%;
+  }
+
+  .women-card {
+    max-width: 80%;
+  }
+}
+
+/* Telas grandes (acima de 1024px) - ajustes finos */
+@media (min-width: 1025px) {
+  .servico.left {
+    margin-left: 20px;
+  }
+
+  .servico.right {
+    margin-right: 20px;
+  }
+
+  .kids-grid img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+  }
+
+  .unidade img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+
+  .btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+  }
+}
+
+/* Dispositivos muito pequenos (até 480px) */
+@media (max-width: 480px) {
+  .hero {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .manifesto-content h1 {
+    font-size: 28px;
+  }
+
+  .sensei-content h1 {
+    font-size: 28px;
+  }
+
+  .kids-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kids-grid img {
+    height: 200px;
+  }
+
+  .unidades h2 {
+    font-size: 1.8rem;
+  }
+
+  .unidade img {
+    height: 200px;
+  }
+
+  .women-intro h2 {
+    font-size: 28px;
+  }
+
+  .contato-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn-whatsapp {
+    padding: 12px 24px;
     width: 100%;
-  
+  }
+}
+
+/* Ajuste para landscape em celulares */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: 150vh;
   }
 
-  .contato {
-    width: 800px;
+  .hero .container-o {
+    margin-top: 20%;
   }
 
+  section {
+    padding: 40px 20px;
+    min-height: auto;
+  }
 
+  .servicos {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+}
 
+/* Ajustes para impressão */
+@media print {
+  .hero::before,
+  .servicos::before,
+  .manifesto-overlay,
+  .contato-overlay,
+  .women-section::before {
+    background: rgba(255, 255, 255, 0.9);
+  }
 
-  .footer {
-    width: 800px;
+  .btn-whatsapp,
+  .mapa iframe {
+    display: none;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
   }
 }
