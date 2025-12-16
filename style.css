@@ -890,7 +890,7 @@ section {
   }
 
   .hero p {
-    font-size: 28px;
+    font-size: 20px;
     text-align: right;
     margin-right: 20px;
     /* margin-top: 100px; */
@@ -1207,6 +1207,7 @@ section {
     background: #fff;
   }
 }
+
 
 
 
